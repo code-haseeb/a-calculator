@@ -1,0 +1,74 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: linear-gradient(to right,blueviolet, greenyellow);
+    margin: 0;
+    padding: 0;
+}
+  
+.grid-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #dc1acc;
+    transform: translate(-50%, -50%);
+    display: grid;
+    /* min-height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4,120px);
+    grid-template-rows: minmax(120px,auto),repeat(5,100px);
+}
+.grid-container > button:hover{
+    background-color:rgb(0, 240, 240) ;
+    transition: 1s ease;
+    
+}
+.grid-container > button{
+    height: 45px;
+    /* background-color: aqua; */
+    background: linear-gradient(to right, #5b5dc8 0%,#db17db 99%);
+    border: 1px solid white ;
+    cursor: pointer;
+    /* height: 40px; */
+    font-size: 20px;
+}
+.output{
+    height: 100px;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: black;
+    border-radius: 5px solid green;
+    color: aliceblue;
+    padding: 10px;
+    font-size:24px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.output .answer{
+    font-size: 1.4em;
+}
+#button-2{
+    grid-column: span 2;
+    border: 1px solid white ;
+
+}
+@media screen and (max-width: 400px) {
+    /* Your CSS styles here */
+    .grid-container{
+        grid-template-columns: repeat(4,60px);
+
+    }
+  }
+  /* @media screen and (max-width: 500px) {
+    /* Your CSS styles here */
+    /* .grid-container{
+        grid-template-columns: repeat(4,100px);
+
+    }
+  } */ 
